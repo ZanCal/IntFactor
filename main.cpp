@@ -50,6 +50,30 @@ int baseline(int n) {
   return flops; 
 }
 
+int iter_reset(int n){
+	/*
+		when a factor pair is found, start the next iteration 
+	*/
+	
+	int flops = 0;
+	int i = 0;
+	
+	//for(int i = 1; i <= n; i ++){
+	while(i <= n){
+		i++;
+		for(int j = 1; j <= n; j ++){
+			flops += 1;
+			if( i * j == n){
+				cout << "(" <<  i << "," << j << ") is a factor pair" << endl;
+				i++;
+				break;
+				
+			}
+		
+		}
+	}
+  return flops;
+}
 
 
 
@@ -57,10 +81,16 @@ int baseline(int n) {
 
 int main() {
  int defInts[6] = {6, 8, 10, 16, 18, 20};
+ int temp1;
+ int temp2;
  for(int i = 0; i < 6; i++ ){
-   int temp = baseline(defInts[i]);
-   cout << temp << endl;
+   temp1 = baseline(defInts[i]);
+   
+   temp2 = iter_reset(defInts[i]);
+   cout << temp1 << " " << temp2 << endl;
  }
-    
+
+  
+	return 0;
 }
 
