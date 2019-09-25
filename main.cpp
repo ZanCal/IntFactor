@@ -221,26 +221,26 @@ int baseline(int n) {
 
 
 int main() {
-
+ //this section stands to be improved grealty. It currently is just there to show that things are indeed working
  int defInts[6] = {128, 64, 32, 16, 8, 4};
  for(int i = 0; i < 6; i++ ){
   int temp1 = baseline(defInts[i]);
-  //int temp2 = sqrtiters(defInts[i]);
-  //int temp3 = sqrtiters3(defInts[i]);
+  int temp2 = sqrtiters(defInts[i]);
+  int temp3 = sqrtiters3(defInts[i]);
   int temp4 = hardcode1n(defInts[i]);
-  //int temp5 = hsqrtiter(defInts[i]);
-  //int temp6 = iterReset(defInts[i]);
-  //int temp7 = iRhard1n(defInts[i]);
-  //int temp8 = jLessI(defInts[i]);
+  int temp5 = hsqrtiter(defInts[i]);
+  int temp6 = iterReset(defInts[i]);
+  int temp7 = iRhard1n(defInts[i]);
+  int temp8 = jLessI(defInts[i]);
   cout << "int: " << defInts[i];
   cout<< " Baseline: " << temp1;
-  //cout << " Sqrt Iter 1: " << temp2;
-  //cout << " Sqrt Iter 3: " << temp3;
+  cout << " Sqrt Iter 1: " << temp2;
+  cout << " Sqrt Iter 3: " << temp3;
   cout << " Hardcoded (1,n): "<< temp4;
-  //cout << " sri and hard: " << temp5;
-  //cout << " iterReset: " << temp6;
-  //cout << " iRhard1n: " << temp7;
-  //cout << " jLessI: " << temp8;
+  cout << " sri and hard: " << temp5;
+  cout << " iterReset: " << temp6;
+  cout << " iRhard1n: " << temp7;
+  cout << " jLessI: " << temp8;
   cout << endl;
  }
  
